@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar" />
+        <!-- For fragments -->
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/frame"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="@color/darkAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language"
+                        android:layout_margin="24dp"
+                        android:contentDescription="@string/app_name"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/setting_global"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/whiteAccent"
+                            android:layout_marginTop="12dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/setting_global_desc"
+                            android:textSize="14sp"
+                            android:textStyle="italic"
+                            android:textColor="@color/whiteAccent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/primary"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/del_all_event"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:background="@color/primary"
+                            android:text="@string/setting_delete_events_all"
+                            android:textColor="@color/whiteAccent"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp"/>
+                        <Button
+                            android:id="@+id/del_event"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:background="@color/primary"
+                            android:text="@string/setting_delete_event"
+                            android:textColor="@color/whiteAccent"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/darkLightAccent"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp">
+
+                            <Spinner
+                                android:id="@+id/del_event_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="32dp"
+                                android:layout_marginRight="32dp"
+                                android:backgroundTint="@color/lightPrimary"
+                                android:spinnerMode="dropdown"/>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/del_all_task"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:background="@color/primary"
+                            android:text="@string/setting_delete_tasks_all"
+                            android:textColor="@color/whiteAccent"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp"/>
+                        <Button
+                            android:id="@+id/del_task"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:background="@color/primary"
+                            android:text="@string/setting_delete_task"
+                            android:textColor="@color/whiteAccent"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/darkLightAccent"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp">
+
+                            <Spinner
+                                android:id="@+id/del_task_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="32dp"
+                                android:layout_marginRight="32dp"
+                                android:backgroundTint="@color/lightPrimary"
+                                android:spinnerMode="dropdown"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navigation_menu">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

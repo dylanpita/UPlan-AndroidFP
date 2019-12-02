@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="event_description_hint">Entrez la description ici..</string>
+    <string name="event_label_end">Date de Fin:</string>
+    <string name="event_label_start">Date de Début:</string>
+    <string name="event_name_hint">Entrez le nom ici..</string>
+    <string name="event_title">Ajouter/Modifier un Évènement</string>
+    <string name="submit">Soumettre</string>
+    <string name="task_description_hint">Entrez la description ici..</string>
+    <string name="task_label_end">Date D\'échéance</string>
+    <string name="task_name_hint">Entrez le nom ici..</string>
+    <string name="task_title">Ajouter/Modifier une Tâche</string>
+    <string name="ui_due_date">Dû Aujourd\'hui à</string>
+    <string name="ui_menu_calendar">Calendrier</string>
+    <string name="ui_menu_events">Évènements</string>
+    <string name="ui_menu_settings">Réglages</string>
+    <string name="ui_menu_tasks">Tâches</string>
+    <string name="ui_menu_workboard">Progrès des Tâches</string>
+    <string name="setting_language">Langues</string>
+    <string name="setting_language_desc">Ici vous pouvez modifier la langue de votre application</string>
+    <string name="setting_language_option_english">Anglais</string>
+    <string name="setting_language_option_french">Français</string>
+    <string name="setting_global_desc">Ici vous pouvez modifier des réglages de l\'application</string>
+    <string name="setting_global">Réglages Généraux</string>
+    <string name="setting_delete_tasks_all">Supprimer les Tâches</string>
+    <string name="setting_delete_task">Supprimer une Tâches</string>
+    <string name="setting_delete_events_all">Supprimer les Évènement</string>
+    <string name="setting_delete_event">Supprimer un Évènement</string>
+</resources>

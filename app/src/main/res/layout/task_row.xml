@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/darkAccent"
+        app:contentPadding="2dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darkLightAccent">
+
+            <TextView
+                android:id="@+id/task_name"
+                android:textColor="@color/whiteAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:textStyle="bold"
+                android:text="@string/placeholder_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/due_text"
+                android:textColor="@color/whiteAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/task_name"
+                android:text="@string/ui_due_date"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:paddingRight="4dp"/>
+
+            <TextView
+                android:id="@+id/task_due_time"
+                android:textColor="@color/whiteAccent"
+                android:layout_toRightOf="@+id/due_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/task_name"
+                android:text="@string/placeholder_time"
+                android:textSize="10sp"
+                android:paddingRight="4dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:paddingRight="10dp"
+                tools:srcCompat="@drawable/edit"
+                android:tint="@color/whiteAccent"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

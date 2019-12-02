@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/calendar"
+        android:icon="@drawable/calendar"
+        android:iconTint="@color/darkLightAccent"
+        android:title="@string/ui_menu_calendar"/>
+    <item android:id="@+id/workboard"
+        android:icon="@drawable/workboard"
+        android:iconTint="@color/darkLightAccent"
+        android:title="@string/ui_menu_workboard"/>
+    <item android:id="@+id/events"
+        android:icon="@drawable/event"
+        android:iconTint="@color/darkLightAccent"
+        android:title="@string/ui_menu_events"/>
+    <item android:id="@+id/tasks"
+        android:icon="@drawable/tasks"
+        android:iconTint="@color/darkLightAccent"
+        android:title="@string/ui_menu_tasks"/>
+    <item android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:iconTint="@color/darkLightAccent"
+        android:title="@string/ui_menu_settings"/>
+</menu>
