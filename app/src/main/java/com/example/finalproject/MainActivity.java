@@ -152,12 +152,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-        onCreate(new Bundle());
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.settings_menu, menu);
         return true;
@@ -226,10 +220,9 @@ public class MainActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
         calendar.set(Calendar.HOUR_OF_DAY, 8);
-        calendar.set(Calendar.MINUTE, 0);
 
         /* Repeating on every day interval */
         manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                AlarmManager.INTERVAL_DAY, pendingIntent);
+                60000*60*12, pendingIntent);
     }
 }
