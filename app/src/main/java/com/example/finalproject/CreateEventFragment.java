@@ -212,7 +212,7 @@ public class CreateEventFragment extends Fragment implements View.OnClickListene
             Event event = new Event(e_name, e_desc, e_entry, e_start, e_end);
             db.addEvent(event);
         }
-
+        getActivity().recreate();
         getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
     }
 

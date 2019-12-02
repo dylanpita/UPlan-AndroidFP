@@ -162,7 +162,7 @@ public class CreateTaskFragment extends Fragment implements View.OnClickListener
             Task task = new Task(t_name, t_desc, t_entry, t_end, step);
             db.addTask(task);
         }
-
+        getActivity().recreate();
         getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
     }
 
