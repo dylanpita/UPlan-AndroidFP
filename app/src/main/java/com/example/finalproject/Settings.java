@@ -88,7 +88,7 @@ public class Settings extends AppCompatActivity {
         del_e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Event event = eventList.get(choice_t.getSelectedItemPosition());
+                Event event = eventList.get(choice_e.getSelectedItemPosition());
                 db.deleteEvent(event.getId());
                 recreate();
             }
